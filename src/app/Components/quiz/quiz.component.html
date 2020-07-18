@@ -1,0 +1,20 @@
+<mat-card *ngFor="let question of questions" class="example-card">
+  <mat-card-content>
+    <h2 style="text-align: center;">{{questions.title}}</h2>
+    <mat-radio-group
+      aria-labelledby="example-radio-group-label"
+      class="example-radio-group"
+    >
+      <mat-radio-button
+        class="example-radio-button"
+        *ngFor="let question of questions"
+        [value]="question"
+      >
+        {{ question.options.title}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card-content>
+  <mat-card-actions class="pl-4">
+    <button color="primary" mat-raised-button>NEXT</button>
+  </mat-card-actions>
+</mat-card>
