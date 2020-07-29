@@ -1,0 +1,38 @@
+<div id="main-div" class="row">
+  <div class="col-6"></div>
+  <div class="col-6 align-self-center d-flex justify-content-center">
+    <div class="example-container">
+      <mat-form-field appearance="outline">
+        <mat-label> Enter your email</mat-label>
+        <input
+          matInput
+          placeholder="pat@example.com"
+          [formControl]="email"
+          required
+        />
+        <mat-error *ngIf="email.invalid">{{
+          getErrorMessage()
+        }}</mat-error> </mat-form-field
+      ><br />
+      <mat-form-field appearance="outline">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" />
+        <button
+          color="primary"
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button> </mat-form-field
+      ><br />
+      <div class="d-flex justify-content-center">
+        <button color="primary" mat-raised-button mat-button>
+          Start the quiz!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 .example-card {
-  max-width: 750px;
+  width: 750px;
 }
 
 .example-radio-group {
@@ -11,4 +11,30 @@
 .example-radio-button {
   margin: 5px;
 }
+
+.mat-card{
+  background-color: #eeeeee;
+}
+
+button{
+  background-color: rgb(44, 44, 44) !important;
+  width: 150px;
+}
+
+#resultButton{
+  width: 250px;
+}
+
+h1{
+  text-align: center !important;
+}
+
+#main-div{
+  background-image: url(../../../assets/img/3086583.jpg); 
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 

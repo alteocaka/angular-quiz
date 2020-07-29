@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Components:
 
@@ -10,7 +10,6 @@ import { RegisterComponent } from './Components/register/register.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { QuizComponent } from './Components/quiz/quiz.component';
 import { ResultComponent } from './Components/result/result.component';
-import { CreateComponent } from './Components/create/create.component';
 
 // Material:
 import { MatButtonModule } from '@angular/material/button';
@@ -34,13 +33,13 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     NavbarComponent,
     QuizComponent,
-    ResultComponent,
-    CreateComponent
+    ResultComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule,

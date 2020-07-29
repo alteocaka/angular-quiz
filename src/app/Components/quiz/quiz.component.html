@@ -1,22 +1,35 @@
-<div class="container-fluid">
-  <mat-card *ngFor="let question of questions" class="example-card">
-    <mat-card-content>
-      <h2 style="text-align: center;">{{ question.title }}</h2>
-      <mat-radio-group
-        aria-labelledby="example-radio-group-label"
-        class="example-radio-group"
-      >
-        <mat-radio-button
-          class="example-radio-button"
-          *ngFor="let option of question.options"
-          [value]="option"
+<div class="container-fluid" id="main-div">
+  <div class="row justify-content-center">
+    <h1>
+      Don't hesitate to answer the questions down below. <br />
+      Good luck!
+    </h1>
+  </div>
+  <div
+    class="p-4 m-4 row justify-content-center"
+    *ngFor="let question of questions"
+  >
+    <mat-card class="example-card">
+      <mat-card-content>
+        <h2 style="text-align: center;">{{ question.title }}</h2>
+        <mat-radio-group
+          aria-labelledby="example-radio-group-label"
+          class="example-radio-group"
         >
-          {{ option.title }}
-        </mat-radio-button>
-      </mat-radio-group>
-    </mat-card-content>
-    <mat-card-actions class="pl-4">
-      <button color="primary" mat-raised-button>NEXT</button>
-    </mat-card-actions>
-  </mat-card>
+          <mat-radio-button
+            class="example-radio-button"
+            *ngFor="let option of question.options"
+            [value]="option"
+          >
+            {{ option.title }}
+          </mat-radio-button>
+        </mat-radio-group>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="row justify-content-center">
+    <button id="resultButton" color="primary" mat-raised-button>
+      GET RESULTS
+    </button>
+  </div>
 </div>
